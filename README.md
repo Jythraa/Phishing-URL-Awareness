@@ -1,6 +1,8 @@
 # EWB Phishing URL Awareness Checker
+
 ## Overview
-[2-3 sentences: what phishing is, and what your tool does.]
+Phishing is a scam where attackers use fake links to trick people into entering passwords or personal details. This Python tool takes a sample URL and checks its text for common warning signs, such as an @ symbol, an IP-address hostname, or an unusually long address. It never opens the URL, so it is safe to use for awareness practice.
+
 ## Features
 - Detects an @ symbol in the URL
 - Flags unusually long URLs (over 100 characters)
@@ -44,8 +46,8 @@ Never enter passwords from unexpected links.
 
 
 ## Screenshots
-![Sample run](C:\Users\HP\Desktop\python\phishing-url-awareness\screenshots\sample_run.png)
-![Test results](C:\Users\HP\Desktop\python\phishing-url-awareness\screenshots\test_results.png)
+![Sample run](screenshots/sample_run.png)
+![Test results](screenshots/test_results.png)
 
 ## Improvements
 - Loop: check several URLs without restarting, with a quit command - [what changed, why, how you tested it]
