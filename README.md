@@ -47,10 +47,12 @@ Never enter passwords from unexpected links.
 
 ## Screenshots
 ![Sample run](screenshots/sample_run.png)
+<img width="912" height="432" alt="sample_run" src="https://github.com/user-attachments/assets/51464c72-b2a5-432e-b4ac-3880677dfeae" />
 ![Test results](screenshots/test_results.png)
+<img width="956" height="431" alt="test_results" src="https://github.com/user-attachments/assets/b002d8d4-8a3d-4b2c-8c01-4e9254450df6" />
 
 ## Improvements
-- Loop: check several URLs without restarting, with a quit command - [what changed, why, how you tested it]
+- Loop: check several URLs without restarting, with a quit command - 
 I have included this improvement as I wanted to check several URLs without restarting again and this solves it.
 I tested it using the example URLs given and it ran perfectly.
 
