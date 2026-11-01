@@ -48,6 +48,7 @@ Never enter passwords from unexpected links.
 ## Screenshots
 ![Sample run](screenshots/sample_run.png)
 <img width="912" height="432" alt="sample_run" src="https://github.com/user-attachments/assets/51464c72-b2a5-432e-b4ac-3880677dfeae" />
+
 ![Test results](screenshots/test_results.png)
 <img width="956" height="431" alt="test_results" src="https://github.com/user-attachments/assets/b002d8d4-8a3d-4b2c-8c01-4e9254450df6" />
 
