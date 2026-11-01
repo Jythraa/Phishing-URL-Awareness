@@ -53,9 +53,11 @@ Never enter passwords from unexpected links.
 <img width="956" height="431" alt="test_results" src="https://github.com/user-attachments/assets/b002d8d4-8a3d-4b2c-8c01-4e9254450df6" />
 
 ## Improvements
-- Loop: check several URLs without restarting, with a quit command - 
+- Loop: check several URLs without restarting, with a quit command :
 I have included this improvement as I wanted to check several URLs without restarting again and this solves it.
 I tested it using the example URLs given and it ran perfectly.
+-  Stop crashes on malformed input :
+I have included this improvement in order for the checker to run efficiently by parsing the URL only if it is safe.
 
 ## Limitations
 This is an educational tool. It only reads URL text. It does not visit
