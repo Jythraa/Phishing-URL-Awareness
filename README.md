@@ -1,0 +1,65 @@
+# EWB Phishing URL Awareness Checker
+## Overview
+[2-3 sentences: what phishing is, and what your tool does.]
+## Features
+- Detects an @ symbol in the URL
+- Flags unusually long URLs (over 100 characters)
+- Flags IP-address hostnames
+- Flags many hostname segments (5 or more)
+- Flags punycode-style hostnames (xn--)
+- Flags the HTTP scheme
+- Runs until we enter q to quit so that we can enter any number of URL for checking
+
+## Requirements
+Python 3.10 or later. No extra packages.
+
+## How to Run
+Windows:   python phishing_checker.py
+Mac/Linux: python3 phishing_checker.py
+
+## Example Output
+EWB Phishing URL Awareness Checker
+Text checks only - this program does not open URLs.
+Enter a sample URL (or type q to quit): https://www.example.com/login
+
+Result:
+- No listed warning sign found.This does not prove safety.
+
+Never enter passwords from unexpected links.
+Enter a sample URL (or type q to quit): https://192.0.2.10/account
+
+Result:
+- Uses an IP address instead of a familiar domain.
+
+Never enter passwords from unexpected links.
+
+## Testing
+| # | Input                                   | Expected                    | Actual                      | Result |
+|---|-----------------------------------------|-----------------------------|-----------------------------|--------|
+| 1 | https://www.example.com/login           | No warning signs            | No warning signs            | PASS |
+| 2 | http://192.0.2.10/account               | IP address + HTTP           | IP Address + HTTP           | PASS |
+| 3 | http://example.com@sample.invalid/login | @ symbol + HTTP             | @ symbol + HTTP             | PASS |
+| 4 | https://a.b.c.d.e.example.invalid/path  | Many hostname segments      | Many hostname segments      | PASS |
+| 5 | https://xn--example.invalid/            | Punycode-style hostname     |Punycode-style hostname      | PASS |
+
+
+## Screenshots
+![Sample run](C:\Users\HP\Desktop\python\phishing-url-awareness\screenshots\sample_run.png)
+![Test results](C:\Users\HP\Desktop\python\phishing-url-awareness\screenshots\test_results.png)
+
+## Improvements
+- Loop: check several URLs without restarting, with a quit command - [what changed, why, how you tested it]
+I have included this improvement as I wanted to check several URLs without restarting again and this solves it.
+I tested it using the example URLs given and it ran perfectly.
+
+## Limitations
+This is an educational tool. It only reads URL text. It does not visit
+URLs, scan for malware or prove that a URL is safe. No warning signs
+found does NOT mean a URL is safe.
+
+## Ethical Use
+Use sample strings only. Do not collect credentials. Do not use this
+project to deceive anyone or to test websites without permission.
+
+## Author
+JYTHRAA TOTA, CSE Student, EWB Courses
