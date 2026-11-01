@@ -8,7 +8,10 @@ def inspect_url(raw_url):
     if not url:
         return["NO URL entered"]
     candidate = url if "://" in url else "http://" + url
-    parsed=urlparse(candidate)
+    try:
+        parsed = urlparse(candidate)
+    except ValueError:
+        return ["This text is not a valid URL format."
     host = (parsed.hostname or "").lower()
     if not host:
         return ["Could not identify hostname."]
